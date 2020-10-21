@@ -41,3 +41,5 @@ npm run deploy
 
 
 Основано на [этой статье](https://hackernoon.com/lets-start-with-webpack-4-91a0f1dba02e)
+"# task-1.6"  git init git add README.md git commit -m "first commit" git branch -M main git remote add origin git@github.com:rishat2002/task-1.6.git git push -u origin main
+"# task-1.6" 
