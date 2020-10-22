@@ -1,17 +1,21 @@
-$bgColor: #24292e;
-$text: #fff;
-
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import 'variables.scss';
+@import "./blocks/article.scss";
+@import "./blocks/feedback-list.scss";
+@import "./blocks/header.scss";
+@import "./blocks/main.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/show-more.scss";
+@import "./blocks/title.scss";
+@import "./blocks/ui-button.scss";
+@import "comon.scss";
+@import "./blocks/servlist.scss";
+@import "./blocks/section.scss";
+@import "./blocks/devices.scss";
+@import "./blocks/services.scss";
+@import "./blocks/menu.scss";
+@import "./blocks/callback-form.scss";
+@import "./blocks/container.scss";
+@import "./blocks/footer.scss";
+@import "./blocks/body.scss";
+@import "./blocks/window-hidden.scss";
+@import "normalize.css";
