@@ -63,15 +63,14 @@
     }
      }
      @media screen and (min-width: $laptop) {
-     .section {
-         max-width: 1120px;
-         margin: 0 auto;
-    }
-     .section .brands__item {
+      
+         margin-right: auto;
+    
+     & .brands__item {
          width: 240px;
          margin-right: 32px;
     }
-     .section__title {
+    &__title {
          border-top: 2px solid #d9fff5;
          padding-left: 32px;
          background: inherit;

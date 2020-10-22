@@ -50,6 +50,7 @@
     @include main-text;
     color: $var3;
     border: 1px solid $var2;
+    overflow: hidden;    
 }
     &__textarea::placeholder {
     @include main-text;
