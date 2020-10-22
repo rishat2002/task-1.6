@@ -1,0 +1,56 @@
+
+
+.article{
+    &__text {
+    padding: 0 16px;
+    &-container {
+        height: 90px;
+        overflow: hidden;
+    }
+}
+&__item {
+    @include small-text;
+    margin-bottom: 20px;
+}
+&__show-more {
+    margin-top: 16px;
+    margin-left: 8px;
+}
+&__img {
+    margin-top: 16px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+    max-width: 425px;
+}
+&__img img {
+    width: 100%;
+}
+
+    @media screen and (min-width: $tablet) {
+    &__text {
+         padding: 0;
+         max-width: 45%;
+    }
+     &__text-container {
+         height: 160px;
+    }
+     &__item {
+         line-height: 20px;
+    }
+     &__img {
+         height: auto;
+         margin-top: 0;
+         width: 50%;
+    }
+     &__img {
+         border-radius: 6px;
+    }
+    }
+    @media screen and (min-width: $laptop){
+    &__text {
+         max-width: 490px;
+    }
+    }
+}

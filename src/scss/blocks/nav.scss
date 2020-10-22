@@ -1,0 +1,52 @@
+
+
+.nav{
+    &__list {
+    width: 100%;
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 24px;
+    }
+    &__item-link {
+    display: flex;
+    align-items: center;
+     @include main-text;
+    color: $var6;
+    text-decoration: none;
+    height: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    &:active, &--active {
+        border: 2px solid $var7;
+        border-radius: 6px;
+        background-color: white;
+    }
+    }
+    @media screen and (min-width: $tablet) {
+        &__list {
+         justify-content: flex-start;
+         margin-bottom: 32px;
+         margin-left: 24px;
+         margin-right: 24px;
+    }
+    }
+
+    @media screen and (min-width: $laptop) {
+        max-width: 1400px;
+         overflow: hidden;
+        &__list {
+         flex-wrap: wrap;
+         margin-bottom: 0px;
+         overflow: hidden;
+    }
+     &__item-link {
+         padding-left: 22px;
+         padding-right: 22px;
+    }
+    }
+}

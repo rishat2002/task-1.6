@@ -1,0 +1,15 @@
+
+.feedback-list {
+     display: none;
+      &__item{
+         margin-left: 16px;
+     }
+     @media screen and (min-width: $tablet){
+         display: flex;
+         align-items: center;
+    
+     }
+     @media screen and (min-width: $laptop){
+         display: none;}
+     
+}

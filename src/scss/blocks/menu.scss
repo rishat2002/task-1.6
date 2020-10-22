@@ -1,0 +1,146 @@
+
+.menu {
+     width: 100%;
+     position: absolute;
+     z-index: 50;
+     display: flex;
+
+
+   &__container {
+     width: 100%;
+     padding: 0px 24px 32px 24px;
+     display: flex;
+     flex-direction: column;
+     height: 100vh;
+     max-width: 360px;
+     background: white;
+     box-shadow:-2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+     position: relative;
+     z-index: 50;
+}
+   &__header {
+     display: flex;
+     align-items: center;
+     padding: 16px 0px 22px 0px;
+     margin: 0px -8px;
+}
+
+    & a:hover {
+     filter: opacity(75%);
+}
+    & .menu__close-btn {
+     background: url('../img/ic/burger.svg') no-repeat;
+}
+    & .menu__search-btn {
+     background: url("../img/ic/search.svg") no-repeat;
+}
+    & .menu__logo {
+     margin-right: auto;
+     margin-left: 16px;
+}
+    & .menu__item {
+     margin: 12px 0px;
+}
+    & .menu__item a::before {
+     content: " ";
+     display: inline-block;
+     height: 32px;
+     width: 4px;
+     background-color: #41f6d7;
+     position: relative;
+     left: -24px;
+     opacity: 0;
+     transition: 0.5s;
+}
+     & .menu__item-link {
+     display: flex;
+     align-items: center;
+     text-decoration: none;
+     color: #1b1c21;
+     height: 32px;
+}
+     & .menu__item-link--active {
+     border-left: 4px solid #41f6d7;
+     padding-left: 20px;
+     margin-left: -24px;
+}
+    &__item a:hover::before {
+     opacity: 1;
+}
+    &__item a:hover {
+     color: #7e7e82;
+}
+    & .feedback-list {
+     display: flex;
+     height: 40px;
+}
+    & .feedback-list__item {
+     margin-right: 16px;
+     margin-left: 0px;
+}
+    & .menu__footer {
+     margin-top: auto;
+}
+ 
+     &__email {
+     margin-top: 16px;
+     color: #1b1c21;
+     display: block;
+}
+     &__number {
+     font-size: 24px;
+     font-weight: bold;
+     color: #1b1c21;
+     display: block;
+     margin-top: 12px;
+     margin-bottom: 8px;
+}
+     &__lang-list {
+     display: flex;
+}
+     &__lang-item {
+     margin-right: 7px;
+     color: #1b1c21;
+}
+     &__lang-button:hover, &__lang-button:focus, &__lang-button--active {
+     color: #7e7e82;
+     outline: none;
+}
+@media screen and (min-width: $tablet) {
+        width: 100%;
+        display: flex;
+   
+     &__header {
+     display: flex;
+     align-items: center;
+     padding: 16px 0px 22px 0px;
+     margin: 0px;
+}
+     &__container {
+     max-width: 320px;
+} 
+     
+     &__number {
+     margin-bottom: 40px;
+}    
+}
+@media screen and (min-width: 1440px) {
+   
+   .body & {   
+    display: block;
+    position: fixed;
+    width: 320px;
+    height: 100%;
+       left: 0;
+       top:0;  
+    }
+   & &__close-btn {
+     display: none;
+    }
+    &__container {
+     box-shadow:none;
+        
+  }    
+}
+}
+

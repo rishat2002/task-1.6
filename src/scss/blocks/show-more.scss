@@ -1,0 +1,13 @@
+
+.show-more {
+    background-color: inherit;
+    background: url(../img/ic/icon1.svg) no-repeat left center;
+    height: 24px;
+    @include main-text;
+    font-weight: 500;
+    padding-left: 24px;
+
+}
+.show-more--rotate{
+    background: url(../img/ic/icon.svg) no-repeat left center;
+}

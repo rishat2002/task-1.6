@@ -1,0 +1,84 @@
+
+
+ .section .devices {
+     padding-right: 16px;
+     height: 216px;
+     &__item {
+     width: 240px;
+     margin-right: 16px;
+     margin-top: 16px;}
+    @media screen and (min-width: $tablet) {
+     
+         max-height: 184px;
+         overflow: hidden;
+         height: auto;
+    
+     &__list {
+         flex-wrap: wrap;
+         overflow: hidden;
+         padding-top: 8px;
+         padding-left: 24px;
+    }
+     &__item {
+         width: 224px;
+         margin-right: 24px;
+    }
+     &--all{
+         max-height: none;
+     }    
+         }
+     @media screen and (min-width: $laptop) {
+     &__item {
+         width: 240px;
+         margin-right: 32px;
+     }     
+     }
+}
+.devices{
+         &__list{
+          display: flex;
+         flex-shrink: 0;
+         padding: 0px 16px 0px 16px;   
+         }
+        &__item-link {
+        display: flex;
+        padding: 16px;
+        height: 160px;
+        border-radius: 6px;
+        background-color: white;
+        border: 1px solid #eaeaea;
+        box-sizing: border-box;
+        color: #1b1c21;
+        font-weight: 500;}
+       &__item-link:after {
+      content: " ";
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url(../img/ic/go.svg) no-repeat;
+      margin-left: auto;
+      margin-top: auto;
+      } 
+    @media screen and (min-width: $tablet) {
+    &-list:before {
+         display: none;
+    } 
+    &__pagination {
+         display: none;
+    }    
+    }
+    @media screen and (min-width: $laptop) {
+    &-list {
+         padding-left: 32px;
+        }
+    }
+}     
+
+ 
+
+
+   
+
+ 
+
+

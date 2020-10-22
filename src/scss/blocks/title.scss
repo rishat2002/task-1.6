@@ -1,0 +1,19 @@
+
+
+.title {
+    position: relative;
+    height: 40px;
+    @include title-text;
+    font-weight: bold;
+    color: $var4;
+    &:before {
+        position: absolute;
+        content: "";
+        border-left: 4px solid $var5;
+        height: 100%;
+        left: -16px;
+        @media screen and (min-width: $tablet) {
+            left: -24px;
+        }
+    }
+}
