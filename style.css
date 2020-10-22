@@ -454,6 +454,7 @@ template {
         display: none; } }
   @media screen and (min-width: 1440px) {
     .header {
+      max-width: 1120px;
       background-color: inherit;
       position: absolute;
       height: 40px;
@@ -721,18 +722,17 @@ a:hover, button:hover {
     .section-container {
       height: auto; } }
   @media screen and (min-width: 1120px) {
-    .section .section {
-      max-width: 1120px;
-      margin: 0 auto; }
-    .section .section .brands__item {
-      width: 240px;
-      margin-right: 32px; }
-    .section .section__title {
-      border-top: 2px solid #d9fff5;
-      padding-left: 32px;
-      background: inherit; }
-    .section .brands__list {
-      padding-left: 32px; } }
+    .section {
+      margin-right: auto; }
+      .section .brands__item {
+        width: 240px;
+        margin-right: 32px; }
+      .section__title {
+        border-top: 2px solid #d9fff5;
+        padding-left: 32px;
+        background: inherit; }
+      .section .brands__list {
+        padding-left: 32px; } }
 
 .brands__list {
   display: flex;
@@ -1004,6 +1004,9 @@ a:hover, button:hover {
   text-align: left;
   color: white;
   text-transform: uppercase; }
+  .long-button--form {
+    width: 136px;
+    font-size: 12px; }
 
 @media screen and (min-width: 767px) {
   .swiper-container {
@@ -1034,7 +1037,7 @@ a:hover, button:hover {
     -webkit-filter: opacity(75%);
             filter: opacity(75%); }
   .menu .menu__close-btn {
-    background: url(./static/burger.svg) no-repeat; }
+    background: url(./static/close.svg); }
   .menu .menu__search-btn {
     background: url(./static/search.svg) no-repeat; }
   .menu .menu__logo {
@@ -1113,8 +1116,7 @@ a:hover, button:hover {
       width: 320px;
       height: 100%;
       left: 0;
-      top: 0;
-      align-self: stretch; }
+      top: 0; }
     .menu .menu__close-btn {
       display: none; }
     .menu__container {
@@ -1197,7 +1199,8 @@ a:hover, button:hover {
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #d9fff5;
-    border: 1px solid #eaeaea; }
+    border: 1px solid #eaeaea;
+    overflow: hidden; }
   .callback-form__textarea::-webkit-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
@@ -1267,15 +1270,11 @@ a:hover, button:hover {
   margin: 0 auto;
   position: relative;
   z-index: 10; }
-  @media screen and (min-width: 1120px) {
-    .container {
-      max-width: 1120px;
-      margin-left: 0;
-      margin-right: auto; } }
   @media screen and (min-width: 1440px) {
     .container {
       margin: 0px;
-      margin-left: auto; } }
+      margin-left: auto;
+      max-width: 1120px; } }
   .container--all {
     max-height: none;
     height: auto; }
@@ -1340,7 +1339,10 @@ a:hover, button:hover {
       .footer__item:last-child {
         width: 213px; } }
 
-.body .window-hidden {
+.body {
+  max-width: 1600px; }
+
+.window-hidden {
   display: none; }
 
 
