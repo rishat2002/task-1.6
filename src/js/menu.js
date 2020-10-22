@@ -15,7 +15,7 @@ const callbackFromMenuCall={
  buttonClose :document.querySelector('.callback--call .callback-form__back')}
 
 function openMenu () {
-       menu.classList.remove('window-hidden');
+       menu.classList.remove('menu--close');
        container.classList.add('container--opacity');
        menuButtonOpen.removeEventListener('click',openMenu);
        menuButtonClose.addEventListener('click',closeMenu);
@@ -26,7 +26,7 @@ function openMenu () {
      })
 }
 function closeMenu() {
-       menu.classList.add('window-hidden');
+       menu.classList.add('menu--close');
        container.classList.remove('container--opacity');
        menuButtonOpen.addEventListener('click',openMenu);
        menuButtonClose.removeEventListener('click',closeMenu);
@@ -43,13 +43,13 @@ menuButtonOpen.addEventListener('click',openMenu);
 function callBackPopupFromMenu(callback){
  callback.buttonOpen.addEventListener('click',openFromMenu);
 function openFromMenu () {
-       callback.popUp.classList.remove('window-hidden');
+       callback.popUp.classList.remove('callback--close');
        closeMenu();
        container.classList.add('container--opacity');
        callback.buttonClose.addEventListener('click',closeFromMenu);
 }
 function closeFromMenu() {
-       callback.popUp.classList.add('window-hidden');
+       callback.popUp.classList.add('callback--close');
        container.classList.remove('container--opacity');
        callback.buttonClose.removeEventListener('click',closeFromMenu);
        menuButtonOpen.addEventListener('click',openMenu);

@@ -16,13 +16,13 @@ const callbackFromHeaderCall={
 function callBackPopupFromHeader(callback){
  callback.buttonOpen.addEventListener('click',openFromHeader);
 function openFromHeader () {
-       callback.popUp.classList.remove('window-hidden');
+       callback.popUp.classList.remove('callback--close');
        container.classList.add('container--opacity');
        callback.buttonOpen.removeEventListener('click',openFromHeader);
        callback.buttonClose.addEventListener('click',closeFromHeader);
 }
 function closeFromHeader() {
-       callback.popUp.classList.add('window-hidden');
+       callback.popUp.classList.add('callback--close');
        container.classList.remove('container--opacity');
        callback.buttonOpen.addEventListener('click',openFromHeader);
        callback.buttonClose.removeEventListener('click',closeFromHeader);

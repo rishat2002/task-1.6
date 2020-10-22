@@ -5,7 +5,7 @@
      z-index: 50;
      display: flex;
 
-
+    
    &__container {
      width: 100%;
      padding: 0px 24px 32px 24px;
@@ -142,5 +142,7 @@
         
   }    
 }
+    &--close{ 
+    display: none;}
 }
 
