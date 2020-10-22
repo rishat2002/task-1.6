@@ -1121,6 +1121,8 @@ a:hover, button:hover {
       display: none; }
     .menu__container {
       box-shadow: none; } }
+  .menu--close {
+    display: none; }
 
 .callback-form {
   width: 320px;
@@ -1156,40 +1158,37 @@ a:hover, button:hover {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    color: #d9fff5;
-    border: 1px solid #eaeaea; }
+    color: #7e7e82;
+    border: 1px solid #eaeaea;
+    padding: 16px; }
   .callback-form__field::-webkit-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
-    position: relative;
-    left: 16px; }
+    position: relative; }
   .callback-form__field::-moz-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
-    position: relative;
-    left: 16px; }
+    position: relative; }
   .callback-form__field:-ms-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
-    position: relative;
-    left: 16px; }
+    position: relative; }
   .callback-form__field::placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
-    position: relative;
-    left: 16px; }
+    position: relative; }
   .callback-form__textarea {
     width: 100%;
     height: 118px;
@@ -1198,45 +1197,38 @@ a:hover, button:hover {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    color: #d9fff5;
+    color: #7e7e82;
     border: 1px solid #eaeaea;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 16px; }
   .callback-form__textarea::-webkit-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
-    position: relative;
-    left: 16px;
-    top: 16px; }
+    position: relative; }
   .callback-form__textarea::-moz-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
-    position: relative;
-    left: 16px;
-    top: 16px; }
+    position: relative; }
   .callback-form__textarea:-ms-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
-    position: relative;
-    left: 16px;
-    top: 16px; }
+    position: relative; }
   .callback-form__textarea::placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
-    position: relative;
-    left: 16px;
-    top: 16px; }
+    position: relative; }
   .callback-form__clarification {
     width: 100%;
     font-family: TT Lakes;
@@ -1263,6 +1255,8 @@ a:hover, button:hover {
   position: absolute;
   display: flex;
   z-index: 50; }
+  .callback--close {
+    display: none; }
 
 .container {
   width: 100%;
@@ -1341,9 +1335,6 @@ a:hover, button:hover {
 
 .body {
   max-width: 1600px; }
-
-.window-hidden {
-  display: none; }
 
 
 /*# sourceMappingURL=style.css.map*/
