@@ -10,6 +10,8 @@
 </head>
 
 <body class="body">
+   <div class="overlay overlay--menu"></div>
+   <div class="overlay overlay--modal"></div> 
    <aside class="menu menu--close">
    <div class="menu__container">
    <header class="menu__header">
@@ -42,10 +44,9 @@
 </ul>
 </div>
 </div>
-<div class="overlay-container overlay-container--menu"></div>
 </aside>
-<div class="callback callback--close callback--info">
- <div class="overlay-container overlay-container--info"></div>
+    <div class="container">   
+<div class="modal modal--feedback">
 <div class="callback-form">
         <button class="ui-button callback-form__back"></button>
        <h2 class="callback-form__title title">Обратная связь</h2>
@@ -67,11 +68,10 @@
           <span class="callback-form__clarification">Нажимая “отправить”, вы даете согласие на <a href="#" class="callback-form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href='#' class="callback-form__link">политикой конфиденциальности</a></span>
       <input type="submit" value="Отправить" class="callback-form__submit long-button long-button--form">
     </form>
-    </div>  
+    </div>
    </div>
-    
-    <div class="callback callback--close callback--call">
-    <div class="overlay-container overlay-container--info"></div>
+
+    <div class="modal modal--call">
     <div class="callback-form">
         <button class="ui-button callback-form__back"></button>
        <h2 class="callback-form__title title">Заказать звонок</h2>
@@ -83,8 +83,7 @@
       <input type="submit" value="Отправить" class="callback-form__submit long-button long-button--form">
     </form>
     </div>
-        </div>  
-    <div class="container">
+        </div>
         <header class="header">
                 <button class="ui-button ui-button--burger header__button-burger"></button>
                 <div class="header__logo logo"><a href="#" class="logo__link"><img src="img/ic/Group.svg" alt="Логотип" class="logo__img"></a></div>
@@ -222,7 +221,7 @@
             <div class="brands__pagination swiper-pagination"></div>
         </div>
   <!-- Swiper -->
-         <button class="section__show-more show-more show-more--brands"  type="button">Показать все</button>
+         <button class="section__show-more show-more"  type="button">Показать все</button>
     </section>
     <section class="section section--devices">
             <h2 class="section__title">Ремонт различных видов техники</h2>
@@ -251,7 +250,7 @@
             </ul>
             <div class="devices__pagination swiper-pagination"></div>
         </div>
-        <button class="section__show-more show-more show-more--devices"  type="button">Показать все</button>
+        <button class="section__show-more show-more"  type="button">Показать все</button>
     </section>
     <section class="section section--services">
             <h2 class="section__title">Цены на услуги</h2>
@@ -359,14 +358,14 @@
     </section>
     <footer class="footer">
     <ul class="footer__list">
-        <li class="footer__item"><div class="footer__copyright">&copy;2019 CPS</div>Разработано командой Apesong</li>
+        <li class="footer__item"><div class="footer__copyright">&copy;2019 CPS</div><a class="footer__link" href="#">Разработано командой Apesong</a></li>
       <li class="footer__item">
         <a class="footer__link" href="#">Политики конфиденциальности</a>
       </li>
       <li class="footer__item">Информация, размещенная на данной странице, не является публичной оффертой</li>
     </ul>
   </footer>
+
     </div>
- 
 </body>
 </html>

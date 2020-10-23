@@ -1,38 +1,37 @@
-
-function showMore(a) {
-a.button__name.addEventListener('click', function () {
-
-    if (a.container.classList.contains('container--all') && a.container.classList.contains('article__text-container')){
-        a.container.classList.remove('container--all');
-        a.button__name.textContent = "Читать далее";
-        a.button__name.classList.remove("show-more--rotate");
+const showMoreButtons=document.querySelectorAll('.show-more');
+let containers = [];
+ containers =[
+ {
+ section: document.querySelector('.article__text-container')
+     },
+ {
+ section: document.querySelector('.brands')
+     },
+ {
+ section: document.querySelector('.devices')
+     }
+ ]
+function showMore(container,button) {
+button.addEventListener('click', function () {
+    if (container.section.classList.contains('container--all') &&                   container.section.classList.contains('article__text-container')){
+        container.section.classList.remove('container--all');
+        button.textContent = "Читать далее";
+        button.classList.remove("show-more--rotate");
     }
-    else if (a.container.classList.contains('container--all')) {
-        a.container.classList.remove('container--all');
-        a.button__name.textContent = "Показать все";
-        a.button__name.classList.remove("show-more--rotate");
+    else if (container.section.classList.contains('container--all')) {
+        container.section.classList.remove('container--all');
+        button.textContent = "Показать все";
+        button.classList.remove("show-more--rotate");
     }
     else {
-        a.container.classList.add('container--all');
-        a.button__name.textContent = "Скрыть";
-        a.button__name.classList.add("show-more--rotate");
+        container.section.classList.add('container--all');
+        button.textContent = "Скрыть";
+        button.classList.add("show-more--rotate");
     }
 });
 }
- let arrShowMore = [];
- arrShowMore =[
- {
- container: document.querySelector('.brands'),
- button__name:document.querySelector('.show-more--brands')},
- {
- container: document.querySelector('.devices'),
- button__name:document.querySelector('.show-more--devices')},
- {
- container: document.querySelector('.article__text-container'),
- button__name:document.querySelector('.article__show-more')
- }
- ]
-for(let i=0;i<arrShowMore.length;i++) {
-    showMore(arrShowMore[i]);
+
+for(let i=0;i<containers.length;i++) {
+    showMore(containers[i],showMoreButtons[i]);
 }
 

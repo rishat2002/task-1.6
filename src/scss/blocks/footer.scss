@@ -53,6 +53,23 @@
         width: 213px;
     }
 }
+    @media screen and (min-width: $pc){
+
+    padding: 32px 24px 25px 24px;
+    border-top:1px solid $var3;
+
+
+&__list {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+   &__item:last-child{
+        width: 330px;
+    }
+}
 }
 
 

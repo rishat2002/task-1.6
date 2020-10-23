@@ -1,18 +1,17 @@
 
 .menu {
-     width: 100%;
+     top:0;
+     left: 0;
      position: absolute;
      z-index: 50;
-     display: flex;
+     display: none;
 
-    
    &__container {
-     width: 100%;
      padding: 0px 24px 32px 24px;
      display: flex;
      flex-direction: column;
      height: 100vh;
-     max-width: 360px;
+     width: 320px;
      background: white;
      box-shadow:-2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
      position: relative;
@@ -58,6 +57,7 @@
      text-decoration: none;
      color: #1b1c21;
      height: 32px;
+     @include main-text;
 }
      & .menu__item-link--active {
      border-left: 4px solid #41f6d7;
@@ -81,7 +81,7 @@
     & .menu__footer {
      margin-top: auto;
 }
- 
+
      &__email {
      margin-top: 16px;
      color: #1b1c21;
@@ -105,11 +105,13 @@
      &__lang-button:hover, &__lang-button:focus, &__lang-button--active {
      color: #7e7e82;
      outline: none;
+
 }
-@media screen and (min-width: $tablet) {
-        width: 100%;
+    &--active{
         display: flex;
-   
+    }
+@media screen and (min-width: $tablet) {
+
      &__header {
      display: flex;
      align-items: center;
@@ -118,31 +120,31 @@
 }
      &__container {
      max-width: 320px;
-} 
-     
+}
+
      &__number {
      margin-bottom: 40px;
-}    
+}
 }
 @media screen and (min-width: 1440px) {
-   
-   .body & {   
+
+   .body & {
     display: block;
     position: fixed;
     width: 320px;
     height: 100%;
-       left: 0;
-       top:0;  
+    z-index: 10;
+       top:auto;
+       left:auto;
     }
    & &__close-btn {
      display: none;
     }
     &__container {
      box-shadow:none;
-        
-  }    
+
+  }
 }
-    &--close{ 
-    display: none;}
+
 }
 

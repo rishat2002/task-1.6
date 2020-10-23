@@ -8,11 +8,11 @@
      margin-right: 16px;
      margin-top: 16px;}
     @media screen and (min-width: $tablet) {
-     
+         margin-left: 8px;
          max-height: 184px;
          overflow: hidden;
          height: auto;
-    
+
      &__list {
          flex-wrap: wrap;
          overflow: hidden;
@@ -25,20 +25,20 @@
     }
      &--all{
          max-height: none;
-     }    
+     }
          }
      @media screen and (min-width: $laptop) {
      &__item {
          width: 240px;
          margin-right: 32px;
-     }     
+     }
      }
 }
 .devices{
          &__list{
           display: flex;
          flex-shrink: 0;
-         padding: 0px 16px 0px 16px;   
+         padding: 0px 16px 0px 16px;
          }
         &__item-link {
         display: flex;
@@ -58,27 +58,27 @@
       background: url(../img/ic/go.svg) no-repeat;
       margin-left: auto;
       margin-top: auto;
-      } 
+      }
     @media screen and (min-width: $tablet) {
     &-list:before {
          display: none;
-    } 
+    }
     &__pagination {
          display: none;
-    }    
+    }
     }
     @media screen and (min-width: $laptop) {
     &-list {
          padding-left: 32px;
         }
     }
-}     
-
- 
+}
 
 
-   
 
- 
+
+
+
+
 
 
