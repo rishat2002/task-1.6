@@ -1,7 +1,7 @@
 
 .footer {
     padding-bottom: 19px;
-    border-top:1px solid $var3;
+    border-top:1px solid $light-aqua1;
 
 
 &__list {
@@ -11,14 +11,14 @@
     align-items: center;
     @include small-text;
     text-align: center;
-    color: $var6;
+    color: $grey;
     opacity: 0.72;
 }
 
 &__link {
     @include small-text;
     text-align: center;
-    color: $var6;
+    color: $grey;
 
 }
 
@@ -29,7 +29,7 @@
 @media screen and (min-width: $tablet){
 
     padding: 32px 24px 25px 24px;
-    border-top:1px solid $var3;
+    border-top:1px solid $light-aqua1;
 
 
 &__list {
@@ -42,7 +42,7 @@
 &__link {
     @include small-text;
     text-align: center;
-    color: $var6;
+    color: $grey;
 
 }
 
@@ -56,7 +56,7 @@
     @media screen and (min-width: $pc){
 
     padding: 32px 24px 25px 24px;
-    border-top:1px solid $var3;
+    border-top:1px solid $light-aqua1;
 
 
 &__list {

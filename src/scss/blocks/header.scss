@@ -4,7 +4,7 @@
      height: 88px;
      display: flex;
      align-items: center;
-     border-bottom: 1px solid $var3;
+     border-bottom: 1px solid $light-aqua1;
      padding: 0 16px 0 16px;
      background: white;
     &__button-burger, &__logo, &__serv-list {
@@ -17,7 +17,7 @@
          display: block;
          width: 2px;
          height: 32px;
-         background: $var2;
+         background: $white-2;
          border-radius: 1px;
          margin-left: 16px;
         left:36px;
@@ -46,7 +46,7 @@
          display: block;
          width: 2px;
          height: 32px;
-         background: $var2;
+         background: $white-2;
          border-radius: 1px;
          margin-left: 16px;
         @media screen and (min-width: $laptop){
