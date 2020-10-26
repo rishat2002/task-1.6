@@ -1,86 +1,93 @@
-const menu = document.querySelector('.menu');
+
+const overlayForModal = document.querySelector('.overlay--modal');
+const openCallModalBtn = document.querySelectorAll('.ui-button--call');
+const closeCallModalBtn = document.querySelector('.callback-form__back--call');
+const closeFeedbackModalBtn = document.querySelector('.callback-form__back--feedback');
+const openFeedbackModalBtn = document.querySelectorAll('.ui-button--chat');
+const feedbackModal = document.querySelector('.modal--feedback');
+const  callbackModal = document.querySelector('.modal--call');
 const containerBlock = document.querySelector('.container');
-const closeOverlayMenu=document.querySelector('.overlay--menu');
 
-const callbackFromHeaderFeedback={
- popUp :document.querySelector('.modal--feedback'),
- openModalBtn :document.querySelector('.ui-button--chat'),
- closeModalBtn :document.querySelector('.modal--feedback .callback-form__back'),
- closeModalOverlay: document.querySelector('.overlay--modal')     
+
+function openCallModal() {
+	overlayForModal.classList.add('overlay--active');
+	callbackModal.classList.add('modal--active');
+    containerBlock.classList.add('container--opacity');
+	overlayForModal.addEventListener('click', calModalOverlayClickHandler);
+	closeCallModalBtn.addEventListener('click', closeCallModalBtnClickHandler);
+	document.addEventListener('keydown', escapeKeydownModalHandler);
 }
 
-const callbackFromHeaderCall={
- popUp :document.querySelector('.modal--call'),
- openModalBtn :document.querySelector('.container .ui-button--call'),
- closeModalBtn :document.querySelector('.modal--call .callback-form__back'),
- closeModalOverlay: document.querySelector('.overlay--modal')
+function closeCallModal() {
+	overlayForModal.classList.remove('overlay--active');
+	callbackModal.classList.remove('modal--active');
+    containerBlock.classList.remove('container--opacity');
+	overlayForModal.removeEventListener('click', calModalOverlayClickHandler);
+	closeCallModalBtn.removeEventListener('click', closeCallModalBtnClickHandler);
+	document.removeEventListener('keydown', escapeKeydownModalHandler);
 }
 
-
-const callbackFromMenuFeedback={
- popUp :document.querySelector('.modal--feedback'),
- openModalBtn :document.querySelector('.ui-button--message'),
- closeModalBtn :document.querySelector('.callback-form__back'),
- closeModalOverlay: document.querySelector('.overlay--modal'),    
+function openFeedbackModal() {
+	overlayForModal.classList.add('overlay--active');
+	feedbackModal.classList.add('modal--active');
+    containerBlock.classList.add('container--opacity');
+	overlayForModal.addEventListener('click', feedbackModalOverlayClickHandler);
+	closeFeedbackModalBtn.addEventListener('click', closeFeedbackModalBtnClickHandler);
+	document.addEventListener('keydown', escapeKeydownModalHandler);
 }
 
-const callbackFromMenuCall={
- popUp :document.querySelector('.modal--call'),
- openModalBtn :document.querySelector('.menu .ui-button--call'),
- closeModalBtn:document.querySelector('.modal--call .callback-form__back'),
- closeModalOverlay: document.querySelector('.overlay--modal')
+function closeFeedbackModal() {
+	feedbackModal.classList.remove('modal--active');
+	overlayForModal.classList.remove('overlay--active');
+    containerBlock.classList.remove('container--opacity');
+	overlayForModal.removeEventListener('click', feedbackModalOverlayClickHandler);
+	closeFeedbackModalBtn.removeEventListener('click', closeFeedbackModalBtnClickHandler);
+	document.removeEventListener('keydown', escapeKeydownModalHandler);
 }
 
-function callBackPopup(callback) {
- 
-function openModal () {
-       menu.classList.remove('menu--active');
-       callback.closeModalOverlay.classList.add('overlay--active');
-       callback.popUp.classList.add('modal--active');
-       containerBlock.classList.add('container--opacity');
-       callback.closeModalBtn.addEventListener('click',btnCloseClickHandler);
-       callback.closeModalOverlay.addEventListener('click',
-                                     closeOverlayClickHandler);
-      document.addEventListener('keydown',escapeKeydownHandler);
-      closeOverlayMenu.classList.remove('overlay--active');
+function openCallModalBtnClickHandler() {
+	openCallModal();
 }
-function closeModal () {
-       callback.popUp.classList.remove('modal--active');
-       containerBlock.classList.remove('container--opacity');
-       callback.closeModalOverlay.classList.remove('overlay--active');
-       callback.closeModalBtn.removeEventListener('click',btnCloseClickHandler);
-       callback.closeModalOverlay.removeEventListener('click',closeOverlayClickHandler);
-       document.removeEventListener('keydown', escapeKeydownHandler);
-}
-    function btnOpenClickHandler(){
-    openModal();
-    }
-    function btnCloseClickHandler(){
-    closeModal();
-    }
-    
-   function closeOverlayClickHandler(){
-    closeModal();
-    }
 
-   function escapeKeydownHandler(evt){
-    if (evt.keyCode === 27) {
-        closeModal();
-    }
-   }
-    
-    
-    callback.openModalBtn.addEventListener('click',openModal);
-    
+function closeCallModalBtnClickHandler() {
+	closeCallModal();
+}
+
+function calModalOverlayClickHandler() {
+	closeCallModal();
+}
+
+function openFeedbackModalBtnClickHandler() {
+	openFeedbackModal();
+}
+
+function closeFeedbackModalBtnClickHandler() {
+	closeFeedbackModal();
+}
+
+function escapeKeydownModalHandler(event) {
+	if (event.keyCode !== 27) return;
+
+	if (feedbackModal.classList.contains('modal--active')) {
+		closeFeedbackModal();
+	} else if (callbackModal.classList.contains('modal--active')) {
+		closeCallModal();
+	}
+}
+
+function feedbackModalOverlayClickHandler() {
+	closeFeedbackModal();
 }
 
 
 
-callBackPopup(callbackFromMenuFeedback);
-callBackPopup(callbackFromMenuCall);
+for(let i=0;i<openCallModalBtn.length;i++){
+    openCallModalBtn[i].addEventListener('click', openCallModalBtnClickHandler);
+}
 
-callBackPopup(callbackFromHeaderFeedback);
-callBackPopup(callbackFromHeaderCall);
+for(let i=0;i<openFeedbackModalBtn.length;i++){
+    openFeedbackModalBtn[i].addEventListener('click', openFeedbackModalBtnClickHandler);
+}
 
 
 

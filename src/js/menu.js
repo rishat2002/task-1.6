@@ -3,7 +3,8 @@ const containerBlock = document.querySelector('.container');
 const closeMenuBtn = document.querySelector('.menu__close-btn');
 const openMenuBtn =document.querySelector('.header__button-burger');
 const closeOverlay=document.querySelector('.overlay--menu');
-
+const feedbackModal = document.querySelector('.modal--feedback');
+const  callbackModal = document.querySelector('.modal--call');
 
 function openMenu () {
        menu.classList.add('menu--active');
@@ -38,6 +39,9 @@ function closeOverlayClickHandler(){
 }
 
 function escapeKeydownMenuHandler(evt){
+ if (feedbackModal.classList.contains("modal--active") || callbackModal.classList.contains("modal--active")){
+     return;
+ }    
  if (evt.keyCode === 27) {
         closeMenu();
       }

@@ -2,14 +2,12 @@
 
     .body{
      max-width: 1440px;
-     @media screen and (min-width: $pc) {    
-     margin:0 auto;
-     position: absolute;
-     max-width: 1440px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;}
+     top:0;
+     bottom: 0;
+     right: 0;
+     left:0;
+        position: absolute;
+        margin: 0 auto;
+     height:100%;    
       }
 

@@ -48,6 +48,12 @@
 
 &__item {
     margin-top: 16px;
+    &:first-child{
+        text-align: left;
+    }
+    &:last-child{
+        text-align: right;
+    }
 }
    &__item:last-child{
         width: 213px;
