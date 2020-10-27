@@ -455,14 +455,13 @@ template {
     .header {
       max-width: 1120px;
       background-color: inherit;
-      position: absolute;
-      height: 40px;
+      height: 72px;
       margin: 0px 0px 8px auto;
       justify-content: flex-end;
       border-bottom: none;
       padding-right: 32px;
       z-index: 10;
-      top: 42px; }
+      padding-top: 42px; }
       .header .header__button-burger, .header__logo {
         display: none; }
       .header__serv-list li:first-child:before {
@@ -494,6 +493,10 @@ template {
     margin-top: 42px; }
   .main__article {
     padding: 0 32px 20px 32px; } }
+
+@media screen and (min-width: 1440px) {
+  .main {
+    margin-top: -80px; } }
 
 .nav__list {
   width: 100%;
@@ -1050,14 +1053,15 @@ a:hover, button:hover {
 .menu {
   top: 0;
   left: 0;
-  position: absolute;
   z-index: 25;
-  display: none; }
+  display: none;
+  position: absolute;
+  height: 100%; }
   .menu__container {
     padding: 0px 24px 32px 24px;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100%;
     width: 320px;
     background: white;
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
@@ -1078,6 +1082,8 @@ a:hover, button:hover {
   .menu .menu__logo {
     margin-right: auto;
     margin-left: 16px; }
+  .menu__list {
+    margin-bottom: 260px; }
   .menu .menu__item {
     margin: 12px 0px; }
   .menu .menu__item a::before {
@@ -1114,8 +1120,6 @@ a:hover, button:hover {
   .menu .feedback-list__item {
     margin-right: 16px;
     margin-left: 0px; }
-  .menu .menu__footer {
-    margin-top: auto; }
   .menu__email {
     margin-top: 16px;
     color: #1b1c21;
@@ -1138,38 +1142,34 @@ a:hover, button:hover {
   .menu--active {
     display: flex; }
   @media screen and (min-width: 767px) {
-    .menu__header {
-      display: flex;
-      align-items: center;
-      padding: 16px 0px 22px 0px;
-      margin: 0px; }
-    .menu__container {
-      max-width: 320px; }
-    .menu__number {
-      margin-bottom: 40px; } }
+    .menu {
+      height: 100%; }
+      .menu__header {
+        display: flex;
+        align-items: center;
+        padding: 16px 0px 22px 0px;
+        margin: 0px; }
+      .menu__container {
+        max-width: 320px; }
+      .menu__number {
+        margin-bottom: 40px; } }
   @media screen and (min-width: 1440px) {
     .body .menu {
-      display: block;
-      position: fixed;
-      width: 320px;
-      height: 100vh;
-      z-index: 10;
-      top: auto;
-      left: auto; }
+      display: flex;
+      width: 320px; }
     .menu .menu__close-btn {
       display: none; }
     .menu__container {
       box-shadow: none; } }
 
 .callback-form {
-  width: 320px;
+  border-left: 1px solid #eaeaea;
+  width: 100%;
+  max-width: 320px;
   padding: 0px 16px;
   display: block;
-  right: 0;
-  top: 0;
-  height: 100vh;
+  height: 100%;
   z-index: 50;
-  position: absolute;
   background: white; }
   .callback-form__back {
     background: url(./static/close.svg);
@@ -1287,11 +1287,14 @@ a:hover, button:hover {
     margin-bottom: 75px; }
 
 .modal {
-  width: 100%;
-  position: absolute;
+  top: 0;
+  right: 0;
+  width: 320px;
+  min-width: 320px;
+  position: fixed;
   display: none;
   z-index: 50;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
+  height: 100vh; }
   .modal--active {
     display: flex; }
 
@@ -1300,19 +1303,17 @@ a:hover, button:hover {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  z-index: 10; }
+  z-index: 10;
+  top: 0;
+  left: 0; }
   @media screen and (min-width: 1440px) {
     .container {
-      position: absolute;
-      right: 0;
-      top: 0;
+      margin: 0;
+      margin-left: auto;
       max-width: 1120px; } }
   .container--all {
     max-height: none;
     height: auto; }
-  .container--opacity {
-    height: 100vh;
-    overflow: hidden; }
 
 .body .container--all {
   max-height: none;
@@ -1324,13 +1325,20 @@ a:hover, button:hover {
   background: white;
   height: 100%;
   opacity: 0.95;
-  display: none; }
+  display: none;
+  top: 0; }
   .overlay--active {
     display: block; }
   .overlay--menu {
     z-index: 20; }
   .overlay--modal {
     z-index: 30; }
+
+.wrapper {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%; }
 
 .footer {
   padding-bottom: 19px;
@@ -1394,13 +1402,8 @@ a:hover, button:hover {
 
 .body {
   max-width: 1440px;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  position: absolute;
-  margin: 0 auto;
-  height: 100%; }
+  position: relative;
+  margin: 0 auto; }
 
 
 /*# sourceMappingURL=style.css.map*/
