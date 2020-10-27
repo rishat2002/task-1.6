@@ -27,7 +27,10 @@
      &--profile {
      background: url("../img/ic/profile.svg") no-repeat;
 }
-    
+    :hover,:focus{
+        opacity: 0.75;
+        cursor: pointer;
+    }  
 }
 
  .logo__link {

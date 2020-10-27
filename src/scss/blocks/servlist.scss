@@ -10,6 +10,10 @@
     &__button {
          display: flex;
          align-items: center;
+         pointer:cursor;
+        :focus,:hover{
+            opacity: 0.75;
+        }
     }
     &__text {
          display: block;

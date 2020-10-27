@@ -7,18 +7,20 @@ const modal = document.querySelectorAll('.modal');
 
 function openMenu () {
        menu.classList.add('menu--active');
-       overlay.addEventListener('click',closeOverlayClickHandler);
        overlay.classList.add('overlay--active');
+       overlay.addEventListener('click',closeOverlayClickHandler);
        closeMenuBtn.addEventListener('click',closeMenuBtnClickHandler);
        document.addEventListener('keydown',escapeKeydownMenuHandler);
+       openMenuBtn.removeEventListener('click',openMenuBtnClickHandler);
 }
 function closeMenu() {
        menu.classList.remove('menu--active');
        overlay.classList.remove('overlay--active');
+       openMenuBtn.addEventListener('click',openMenuBtnClickHandler);
        overlay.removeEventListener('click',closeOverlayClickHandler);
        closeMenuBtn.removeEventListener('click',closeMenuBtnClickHandler);
-       document.removeEventListener('keydown', escapeKeydownMenuHandler
-) }
+       document.removeEventListener('keydown', escapeKeydownMenuHandler)
+}
 
 
 function openMenuBtnClickHandler(){
@@ -34,11 +36,11 @@ function closeOverlayClickHandler(){
 }
 
 function escapeKeydownMenuHandler(evt){
-for(let i=0;i<modal.length;i++){    
- if (modal[i].classList.contains("modal--active")){
+  
+ if (modal.some(classList.contains("modal--active"))){
      return;
   }
- }    
+     
  if (evt.keyCode === 27) {
         closeMenu();
       }

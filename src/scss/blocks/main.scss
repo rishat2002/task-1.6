@@ -35,5 +35,10 @@
     }
      @media screen and (min-width: $pc){
     margin-top: -80px;
+    &__title {
+         margin-bottom: 8px;
+         margin-top: 42px;
+         width: 350px;
+    }     
     }
 }

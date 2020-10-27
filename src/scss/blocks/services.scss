@@ -210,6 +210,9 @@
      letter-spacing: -0.15px;
      text-transform: uppercase;
      font-weight: 600;
+     cursor: pointer;
+     :hover,:focus{
+     opacity: 0.75;}
      &--form{
          width: 136px;
          font-size: 12px;
