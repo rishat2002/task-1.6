@@ -57,14 +57,13 @@
     @media screen and (min-width: 1440px) {
          max-width: 1120px;
          background-color: inherit;
-         position: absolute;
-         height: 40px;
+         height: 72px;
          margin: 0px 0px 8px auto;
          justify-content: flex-end;
          border-bottom: none;
          padding-right: 32px;
          z-index: 10;
-         top:42px;
+         padding-top: 42px;
        .header &__button-burger, &__logo {
          display: none;
         }

@@ -12,7 +12,6 @@ const containerBlock = document.querySelector('.container');
 function openCallModal() {
 	overlayForModal.classList.add('overlay--active');
 	callbackModal.classList.add('modal--active');
-    containerBlock.classList.add('container--opacity');
 	overlayForModal.addEventListener('click', calModalOverlayClickHandler);
 	closeCallModalBtn.addEventListener('click', closeCallModalBtnClickHandler);
 	document.addEventListener('keydown', escapeKeydownModalHandler);
@@ -21,7 +20,6 @@ function openCallModal() {
 function closeCallModal() {
 	overlayForModal.classList.remove('overlay--active');
 	callbackModal.classList.remove('modal--active');
-    containerBlock.classList.remove('container--opacity');
 	overlayForModal.removeEventListener('click', calModalOverlayClickHandler);
 	closeCallModalBtn.removeEventListener('click', closeCallModalBtnClickHandler);
 	document.removeEventListener('keydown', escapeKeydownModalHandler);
@@ -30,7 +28,6 @@ function closeCallModal() {
 function openFeedbackModal() {
 	overlayForModal.classList.add('overlay--active');
 	feedbackModal.classList.add('modal--active');
-    containerBlock.classList.add('container--opacity');
 	overlayForModal.addEventListener('click', feedbackModalOverlayClickHandler);
 	closeFeedbackModalBtn.addEventListener('click', closeFeedbackModalBtnClickHandler);
 	document.addEventListener('keydown', escapeKeydownModalHandler);
@@ -39,7 +36,6 @@ function openFeedbackModal() {
 function closeFeedbackModal() {
 	feedbackModal.classList.remove('modal--active');
 	overlayForModal.classList.remove('overlay--active');
-    containerBlock.classList.remove('container--opacity');
 	overlayForModal.removeEventListener('click', feedbackModalOverlayClickHandler);
 	closeFeedbackModalBtn.removeEventListener('click', closeFeedbackModalBtnClickHandler);
 	document.removeEventListener('keydown', escapeKeydownModalHandler);
@@ -67,7 +63,6 @@ function closeFeedbackModalBtnClickHandler() {
 
 function escapeKeydownModalHandler(event) {
 	if (event.keyCode !== 27) return;
-
 	if (feedbackModal.classList.contains('modal--active')) {
 		closeFeedbackModal();
 	} else if (callbackModal.classList.contains('modal--active')) {
@@ -78,8 +73,6 @@ function escapeKeydownModalHandler(event) {
 function feedbackModalOverlayClickHandler() {
 	closeFeedbackModal();
 }
-
-
 
 for(let i=0;i<openCallModalBtn.length;i++){
     openCallModalBtn[i].addEventListener('click', openCallModalBtnClickHandler);

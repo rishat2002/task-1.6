@@ -5,13 +5,14 @@
      margin: 0 auto;
      position: relative;
      z-index: 10;
+     top:0;
+     left: 0;
      @media screen and (min-width: $laptop) {
 
     }
-    @media screen and (min-width: $pc) {
-    position: absolute;    
-    right:0;
-    top:0;    
+    @media screen and (min-width: $pc) {   
+    margin: 0;
+    margin-left: auto;
     max-width: 1120px;
     }
 
@@ -19,10 +20,7 @@
      max-height: none;
      height: auto;
      }
-    &--opacity{
-        height: 100vh;
-        overflow: hidden;
-    }
+
 }
 .body .container--all{
      max-height: none;
@@ -36,6 +34,7 @@
     height: 100%;
     opacity: 0.95;
     display: none;
+    top:0;
     &--active{
         display: block;
     }
@@ -45,4 +44,11 @@
     &--modal{
      z-index: 30;  
     }
+}
+
+.wrapper {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
 }

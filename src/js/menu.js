@@ -3,23 +3,18 @@ const containerBlock = document.querySelector('.container');
 const closeMenuBtn = document.querySelector('.menu__close-btn');
 const openMenuBtn =document.querySelector('.header__button-burger');
 const closeOverlay=document.querySelector('.overlay--menu');
-const feedbackModal = document.querySelector('.modal--feedback');
-const  callbackModal = document.querySelector('.modal--call');
+const modal = document.querySelectorAll('.modal');
 
 function openMenu () {
        menu.classList.add('menu--active');
-       containerBlock.classList.add('container--opacity');
-       closeOverlay.addEventListener('click',
-                                     closeOverlayClickHandler);
+       closeOverlay.addEventListener('click',closeOverlayClickHandler);
        closeOverlay.classList.add('overlay--active');
-       closeMenuBtn.addEventListener('click',
-                                     closeMenuBtnClickHandler);
+       closeMenuBtn.addEventListener('click',closeMenuBtnClickHandler);
        document.addEventListener('keydown',escapeKeydownMenuHandler);
 }
 function closeMenu() {
        menu.classList.remove('menu--active');
        closeOverlay.classList.remove('overlay--active');
-       containerBlock.classList.remove('container--opacity');
        closeOverlay.removeEventListener('click',closeOverlayClickHandler);
        closeMenuBtn.removeEventListener('click',closeMenuBtnClickHandler);
        document.removeEventListener('keydown', escapeKeydownMenuHandler
@@ -39,8 +34,10 @@ function closeOverlayClickHandler(){
 }
 
 function escapeKeydownMenuHandler(evt){
- if (feedbackModal.classList.contains("modal--active") || callbackModal.classList.contains("modal--active")){
+for(let i=0;i<modal.length;i++){    
+ if (modal[i].classList.contains("modal--active")){
      return;
+  }
  }    
  if (evt.keyCode === 27) {
         closeMenu();
