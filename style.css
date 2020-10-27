@@ -383,9 +383,9 @@ template {
   .article__item {
     line-height: 20px; }
   .article__img {
-    height: auto;
     margin-top: 0;
-    width: 50%; }
+    width: 50%;
+    margin-right: -6px; }
   .article__img {
     border-radius: 6px; } }
 
@@ -496,7 +496,11 @@ template {
 
 @media screen and (min-width: 1440px) {
   .main {
-    margin-top: -80px; } }
+    margin-top: -80px; }
+    .main__title {
+      margin-bottom: 8px;
+      margin-top: 42px;
+      width: 350px; } }
 
 .nav__list {
   width: 100%;
@@ -599,6 +603,9 @@ template {
     background: url(./static/chat.svg) no-repeat; }
   .ui-button--profile {
     background: url(./static/profile.svg) no-repeat; }
+  .ui-button :hover, .ui-button :focus {
+    opacity: 0.75;
+    cursor: pointer; }
 
 .logo__link {
   display: block; }
@@ -662,7 +669,10 @@ a:hover, button:hover {
     margin-left: auto; }
     .serv-list__button {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      pointer: cursor; }
+      .serv-list__button :focus, .serv-list__button :hover {
+        opacity: 0.75; }
     .serv-list__text {
       display: block;
       margin-right: 8px;
@@ -1038,7 +1048,10 @@ a:hover, button:hover {
   line-height: 24px;
   letter-spacing: -0.15px;
   text-transform: uppercase;
-  font-weight: 600; }
+  font-weight: 600;
+  cursor: pointer; }
+  .long-button :hover, .long-button :focus {
+    opacity: 0.75; }
   .long-button--form {
     width: 136px;
     font-size: 12px;
@@ -1055,10 +1068,11 @@ a:hover, button:hover {
   left: 0;
   z-index: 25;
   display: none;
-  position: absolute;
-  height: 100%; }
+  position: fixed;
+  height: 100vh;
+  overflow: hidden; }
   .menu__container {
-    padding: 0px 24px 32px 24px;
+    padding: 0px 24px 0px 24px;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -1082,8 +1096,6 @@ a:hover, button:hover {
   .menu .menu__logo {
     margin-right: auto;
     margin-left: 16px; }
-  .menu__list {
-    margin-bottom: 260px; }
   .menu .menu__item {
     margin: 12px 0px; }
   .menu .menu__item a::before {
@@ -1120,6 +1132,8 @@ a:hover, button:hover {
   .menu .feedback-list__item {
     margin-right: 16px;
     margin-left: 0px; }
+  .menu .menu__footer {
+    margin-top: auto; }
   .menu__email {
     margin-top: 16px;
     color: #1b1c21;
@@ -1143,7 +1157,10 @@ a:hover, button:hover {
     display: flex; }
   @media screen and (min-width: 767px) {
     .menu {
+      position: absolute;
       height: 100%; }
+      .menu__list {
+        margin-bottom: 260px; }
       .menu__header {
         display: flex;
         align-items: center;
@@ -1152,7 +1169,9 @@ a:hover, button:hover {
       .menu__container {
         max-width: 320px; }
       .menu__number {
-        margin-bottom: 40px; } }
+        margin-bottom: 40px; }
+      .menu .menu__footer {
+        margin-top: 0; } }
   @media screen and (min-width: 1440px) {
     .body .menu {
       display: flex;
@@ -1175,6 +1194,11 @@ a:hover, button:hover {
     background: url(./static/close.svg);
     margin-top: 24px;
     margin-bottom: 32px; }
+    @media screen and (min-width: 1440px) {
+      .callback-form__back {
+        position: absolute;
+        left: -66px;
+        top: 18px; } }
   .callback-form__title {
     margin-top: 40px;
     margin-bottom: 24px; }
@@ -1291,10 +1315,10 @@ a:hover, button:hover {
   right: 0;
   width: 320px;
   min-width: 320px;
-  position: fixed;
   display: none;
   z-index: 50;
-  height: 100vh; }
+  height: 100vh;
+  position: fixed; }
   .modal--active {
     display: flex; }
 
@@ -1303,9 +1327,7 @@ a:hover, button:hover {
   height: 100%;
   margin: 0 auto;
   position: relative;
-  z-index: 10;
-  top: 0;
-  left: 0; }
+  z-index: 10; }
   @media screen and (min-width: 1440px) {
     .container {
       margin: 0;
@@ -1333,12 +1355,6 @@ a:hover, button:hover {
     z-index: 20; }
   .overlay--modal {
     z-index: 30; }
-
-.wrapper {
-  position: relative;
-  display: block;
-  height: 100%;
-  width: 100%; }
 
 .footer {
   padding-bottom: 19px;
