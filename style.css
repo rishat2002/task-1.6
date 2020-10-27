@@ -1072,7 +1072,7 @@ a:hover, button:hover {
   height: 100vh;
   overflow: hidden; }
   .menu__container {
-    padding: 0px 24px 0px 24px;
+    padding: 0px 24px 32px 24px;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -1321,6 +1321,12 @@ a:hover, button:hover {
   position: fixed; }
   .modal--active {
     display: flex; }
+  @media screen and (min-width: 1440px) {
+    .modal {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%; } }
 
 .container {
   width: 100%;
@@ -1355,6 +1361,15 @@ a:hover, button:hover {
     z-index: 20; }
   .overlay--modal {
     z-index: 30; }
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 1440px; }
+  @media screen and (min-width: 1440px) {
+    .wrapper {
+      width: 1440px; } }
 
 .footer {
   padding-bottom: 19px;
