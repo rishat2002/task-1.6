@@ -503,7 +503,6 @@ template {
       width: 350px; } }
 
 .nav__list {
-  width: 100%;
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -603,6 +602,8 @@ template {
     background: url(./static/chat.svg) no-repeat; }
   .ui-button--profile {
     background: url(./static/profile.svg) no-repeat; }
+  .ui-button--close {
+    background: url(./static/close.svg); }
   .ui-button :hover, .ui-button :focus {
     opacity: 0.75;
     cursor: pointer; }
@@ -1072,26 +1073,18 @@ a:hover, button:hover {
   height: 100vh;
   width: 100vw;
   max-width: 320px;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2); }
-  .menu__container {
-    padding: 0px 24px 32px 24px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-    width: 320px;
-    background: white;
-    position: relative;
-    z-index: 50; }
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  padding: 0px 24px 32px 24px;
+  flex-direction: column;
+  min-height: 100%;
+  background: white; }
   .menu__header {
     display: flex;
     align-items: center;
-    padding: 16px 0px 22px 0px;
-    margin: 0px -8px; }
+    padding: 16px 0px 22px 0px; }
   .menu a:hover {
     -webkit-filter: opacity(75%);
             filter: opacity(75%); }
-  .menu .menu__close-btn {
-    background: url(./static/close.svg); }
   .menu .menu__search-btn {
     background: url(./static/search.svg) no-repeat; }
   .menu .menu__logo {
@@ -1175,44 +1168,48 @@ a:hover, button:hover {
         margin-top: 0; } }
   @media screen and (min-width: 1440px) {
     .menu {
-      position: absolute; }
+      position: absolute;
+      box-shadow: none; }
       .body .menu {
         display: flex;
         width: 320px; }
       .menu .menu__close-btn {
-        display: none; }
-      .menu__container {
-        box-shadow: none; } }
+        display: none; } }
 
-.callback-form {
+.modal {
   border-left: 1px solid #eaeaea;
   width: 100%;
   max-width: 320px;
   padding: 0px 16px;
-  display: block;
+  display: none;
   height: 100%;
   z-index: 50;
-  background: white; }
-  .callback-form__back {
-    background: url(./static/close.svg);
+  background: white;
+  position: fixed;
+  top: 0;
+  right: 0; }
+  .modal__close {
     margin-top: 24px;
     margin-bottom: 32px; }
     @media screen and (min-width: 1440px) {
-      .callback-form__back {
+      .modal__close {
         position: absolute;
         left: -66px;
         top: 18px; } }
-  .callback-form__title {
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__title {
     margin-top: 40px;
     margin-bottom: 24px; }
-  .callback-form__title:before {
+  .modal__title:before {
     content: "";
     display: block;
     height: 40px;
     width: 4px;
     position: absolute;
     left: -16px; }
-  .callback-form__field {
+  .modal__field {
     height: 48px;
     margin-bottom: 16px;
     border-radius: 6px;
@@ -1224,35 +1221,35 @@ a:hover, button:hover {
     color: #7e7e82;
     border: 1px solid #eaeaea;
     padding: 16px; }
-  .callback-form__field::-webkit-input-placeholder {
+  .modal__field::-webkit-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
     position: relative; }
-  .callback-form__field::-moz-placeholder {
+  .modal__field::-moz-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
     position: relative; }
-  .callback-form__field:-ms-input-placeholder {
+  .modal__field:-ms-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
     position: relative; }
-  .callback-form__field::placeholder {
+  .modal__field::placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
     position: relative; }
-  .callback-form__textarea {
+  .modal__textarea {
     width: 100%;
     height: 118px;
     border-radius: 6px;
@@ -1263,67 +1260,58 @@ a:hover, button:hover {
     color: #7e7e82;
     border: 1px solid #eaeaea;
     overflow: hidden;
-    padding: 16px; }
-  .callback-form__textarea::-webkit-input-placeholder {
+    padding: 16px;
+    margin-bottom: 16px; }
+  .modal__textarea::-webkit-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
     position: relative; }
-  .callback-form__textarea::-moz-placeholder {
+  .modal__textarea::-moz-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
     position: relative; }
-  .callback-form__textarea:-ms-input-placeholder {
+  .modal__textarea:-ms-input-placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
     position: relative; }
-  .callback-form__textarea::placeholder {
+  .modal__textarea::placeholder {
     font-family: TT Lakes;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
     color: #7e7e82;
     position: relative; }
-  .callback-form__clarification {
+  .modal__footer {
     width: 100%;
     font-family: TT Lakes;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px;
     color: #7e7e82; }
-  .callback-form__link {
+  .modal__link {
     color: #FF3E79;
     font-family: TT Lakes;
     font-size: 14px;
     line-height: 18px;
     letter-spacing: 0.2px; }
-  .callback-form__submit {
+  .modal__submit {
     display: block;
     margin-left: auto;
     margin-top: 19px;
     outline: none;
     border: none;
     margin-bottom: 75px; }
-
-.modal {
-  top: 0;
-  right: 0;
-  max-width: 320px;
-  display: none;
-  z-index: 50;
-  height: 100vh;
-  width: 100vw;
-  position: fixed; }
   .modal--active {
-    display: flex; }
+    display: block; }
   @media screen and (min-width: 1440px) {
     .modal {
       position: absolute;
