@@ -4,33 +4,36 @@
      width: 40px;
     transition: 0.5s;
     &--burger {
-		background: url("../img/ic/burger.svg") no-repeat;
-	}
-	&--call {
-		background: url("../img/ic/call.svg") no-repeat;
-	}
-	&--chat {
-		background: url("../img/ic/chat.svg") no-repeat;
-	}
-	&--profile {
-		background: url("../img/ic/profile.svg") no-repeat;
-	}
-	&--request {
-		background: url("../img/ic/repair.svg") no-repeat;
-	}
-	&--check-status {
-		 background: url("../img/ic/checkstatus.svg") no-repeat;
-	}
+        background: url("../img/ic/burger.svg") no-repeat;
+    }
+    &--call {
+        background: url("../img/ic/call.svg") no-repeat;
+    }
+    &--chat {
+        background: url("../img/ic/chat.svg") no-repeat;
+    }
+    &--profile {
+        background: url("../img/ic/profile.svg") no-repeat;
+    }
+    &--request {
+        background: url("../img/ic/repair.svg") no-repeat;
+    }
+    &--check-status {
+         background: url("../img/ic/checkstatus.svg") no-repeat;
+    }
     &--message {
      background: url(../img/ic/chat.svg) no-repeat;
 }
      &--profile {
      background: url("../img/ic/profile.svg") no-repeat;
 }
+    &--close{
+        background: url(../img/ic/close.svg);
+    }
     :hover,:focus{
         opacity: 0.75;
         cursor: pointer;
-    }  
+    }
 }
 
  .logo__link {

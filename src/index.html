@@ -293,9 +293,8 @@
   </footer>
     </div>
 <aside class="menu">
-   <div class="menu__container">
    <header class="menu__header">
-    <button class="menu__close-btn ui-button"></button>
+    <button class="ui-button ui-button--close menu__close-btn"></button>
         <div class="menu__logo logo"><a href="" class="logo__link"><img src="img/ic/Group.svg" alt="Логотип"></a></div>
         <a href="" class="ui-button menu__search-btn"></a>
     </header>
@@ -323,46 +322,29 @@
     <li class="menu__lang-item"><button class="menu__lang-button">CH</button></li>
 </ul>
 </div>
-</div>
 </aside>
-<div class="overlay overlay--menu"></div> 
-<div class="overlay overlay--modal"></div>       
+<div class="overlay overlay--menu"></div>
+<div class="overlay overlay--modal"></div>
 <div class="modal modal--feedback">
-<div class="callback-form">
-        <button class="ui-button callback-form__back callback-form__back--feedback"></button>
-       <h2 class="callback-form__title title">Обратная связь</h2>
-      <form action="#" method="post">
-      <label>
-      <input type="text" name="login" id="login-field" required placeholder="Имя" class="callback-form__field">
-      </label>
-      <br>
-      <label>
-      <input type="tel" name="number" id="number-field" required placeholder="Телефон" class="callback-form__field">
-      </label>
-      <br>
-      <label>
-      <input type="email" name="email" id="email-field" required placeholder="Электронная почта" class="callback-form__field">
-      </label>
-      <br>
-      <textarea name="comment" id="comment-field" placeholder="Сообщение" class="callback-form__textarea"></textarea>
-      <br>
-          <span class="callback-form__clarification">Нажимая “отправить”, вы даете согласие на <a href="#" class="callback-form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href='#' class="callback-form__link">политикой конфиденциальности</a></span>
-      <input type="submit" value="Отправить" class="callback-form__submit long-button long-button--form">
+        <button class="ui-button--close ui-button modal__close"></button>
+       <h2 class="modal__title title">Обратная связь</h2>
+      <form action="#" method="post" class="modal__form">
+      <input type="text" name="login" id="login-field" required placeholder="Имя" class="modal__field">
+      <input type="tel" name="number" id="number-field" required placeholder="Телефон" class="modal__field">
+      <input type="email" name="email" id="email-field" required placeholder="Электронная почта" class="modal__field">
+      <textarea name="comment" id="comment-field" placeholder="Сообщение" class="modal__textarea"></textarea>
+      <span class="modal__footer">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href='#' class="modal__link">политикой конфиденциальности</a></span>
+      <input type="submit" value="Отправить" class="modal__submit long-button">
     </form>
-    </div>
    </div>
 <div class="modal modal--call">
-    <div class="callback-form">
-        <button class="ui-button callback-form__back callback-form__back--call"></button>
-       <h2 class="callback-form__title title">Заказать звонок</h2>
-      <form action="#" method="post">
-      <label>
-      <input type="tel" name="number" id="number-field" required placeholder="Телефон" class="callback-form__field">
-      </label>
-          <span class="callback-form__clarification">Нажимая “отправить”, вы даете согласие на <a href="#" class="callback-form__link">обработку персональных данных</a> и соглашаетесь с нашей <a href='#' class="callback-form__link">политикой конфиденциальности</a></span>
-      <input type="submit" value="Отправить" class="callback-form__submit long-button long-button--form">
+        <button class="ui-button ui-button--close modal__close"></button>
+       <h2 class="modal__title title">Заказать звонок</h2>
+      <form action="#" method="post" class="modal__form">
+      <input type="tel" name="number" id="number-field" required placeholder="Телефон" class="modal__field">
+          <span class="modal__footer">Нажимая “отправить”, вы даете согласие на <a href="#" class="modal__link">обработку персональных данных</a> и соглашаетесь с нашей <a href='#' class="modal__link">политикой конфиденциальности</a></span>
+      <input type="submit" value="Отправить" class="modal__submit long-button">
     </form>
     </div>
-        </div>                                 
 </body>
 </html>

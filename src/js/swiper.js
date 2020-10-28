@@ -1,4 +1,3 @@
-
 var mySwiper;
 const mediaQuery = window.matchMedia('(max-width: 767px)')
 
@@ -11,7 +10,7 @@ function handleTabletChange(e) {
                 clickable: true,
             },
         });
-    } 
+    }
 }
 mediaQuery.addListener(handleTabletChange);
 handleTabletChange(mediaQuery);
